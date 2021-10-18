@@ -17,7 +17,10 @@ const Header = () => {
   }
   window.addEventListener("scroll", changeBackground);
 
-  const { logOut, displayName, photoURL, email } = useAuth();
+  const { allAuthInfo } = useAuth();
+  const { logOut, user } = allAuthInfo;
+  const { displayName, photoURL, email } = user;
+  console.log(allAuthInfo.user.photoURL);
   return (
     <div>
       <Navbar
@@ -88,8 +91,9 @@ const Header = () => {
                   }
                 >
                   <div className="text-center">
-                    <h6>{displayName}</h6>
-                    <p className="m-0 mb-2">{email}</p>
+                    <img width="100px" src={photoURL} alt="" />
+                    <h6 className="mt-3">{displayName}</h6>
+                    <p className="m-0 email mb-2">{email}</p>
                     <button onClick={logOut} className="btn btn-primary">
                       Sign Out
                     </button>

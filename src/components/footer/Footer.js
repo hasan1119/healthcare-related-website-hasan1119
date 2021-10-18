@@ -1,13 +1,17 @@
 import React from "react";
 import "./footer.css";
-import payment from "./../../assets/images/payment.png";
-import footerLogo from "./../../assets/images/footer-logo.png";
 import { Col, Container, Row } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
+  faTwitter,
+  faFacebookF,
+  faInstagram,
+  faYoutube,
+} from "@fortawesome/free-brands-svg-icons";
+import {
+  faMapMarkerAlt,
   faEnvelope,
   faPhone,
-  faMapMarkerAlt,
 } from "@fortawesome/free-solid-svg-icons";
 import { NavLink } from "react-router-dom";
 
@@ -17,31 +21,36 @@ const Footer = () => {
       <div className="py-4 gradient">
         <Container>
           <Row>
-            <Col md={6}>
-              <div className="text-center my-2">
-                <img width="120px" src={footerLogo} alt="" />
-              </div>
-
-              <ul className="list-unstyled">
+            <Col lg md={6} className="mb-sm-3">
+              <h3>HealthCare</h3>
+              <p className="h-desc">
+                Far far away, behind the word mountains, far from the countries.
+              </p>
+              <ul className="list-unstyled social-icons d-flex">
                 <li>
-                  <FontAwesomeIcon icon={faMapMarkerAlt} />
-                  <span className="ms-1 fs-5">Naogaon,Rajshahi,Bangladesh</span>
+                  <a href="/">
+                    <FontAwesomeIcon icon={faTwitter} />
+                  </a>
                 </li>
                 <li>
-                  <FontAwesomeIcon icon={faEnvelope} />
-                  <span className="ms-1 fs-5">
-                    Official: coding.club.pro@gmail.com
-                  </span>
+                  <a href="/">
+                    <FontAwesomeIcon icon={faFacebookF} />
+                  </a>
                 </li>
                 <li>
-                  <FontAwesomeIcon icon={faPhone} />
-                  <span className="ms-1 fs-5">
-                    Helpline: 01763251119(Available:10:00AM to 10.00PM)
-                  </span>
+                  <a href="/">
+                    <FontAwesomeIcon icon={faInstagram} />
+                  </a>
+                </li>
+                <li>
+                  <a href="/">
+                    <FontAwesomeIcon icon={faYoutube} />
+                  </a>
                 </li>
               </ul>
             </Col>
-            <Col md={2}>
+            <Col lg md={6} className="mb-sm-3">
+              <h3>Links</h3>
               <ul className="list-unstyled footer-link">
                 <li>
                   <NavLink to="/home">Home</NavLink>
@@ -53,29 +62,73 @@ const Footer = () => {
                   <NavLink to="/contact">Contact us</NavLink>
                 </li>
                 <li>
-                  <NavLink to="/courses">Courses</NavLink>
-                </li>
-                <li>
-                  <NavLink to="/policy">Policy</NavLink>
+                  <NavLink to="/courses">Services</NavLink>
                 </li>
               </ul>
             </Col>
-            <Col md={4}>
-              <div className="">
-                <img
-                  className="img-fluid"
-                  src={payment}
-                  alt="payment methods"
-                />
-              </div>
+            <Col lg md={6} className="mb-sm-3">
+              <h3>Departments</h3>
+              <ul className="list-unstyled footer-link">
+                <li>
+                  <NavLink to="/home">Neurology</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/about">Opthalmology</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/contact">Nuclear Magnetic</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/courses">Surgical</NavLink>
+                </li>
+              </ul>
+            </Col>
+            <Col lg md={6}>
+              <h3>Reach Out Us?</h3>
+
+              <ul className="list-unstyled contact-info">
+                <li>
+                  <Row>
+                    <Col md={1}>
+                      <FontAwesomeIcon icon={faMapMarkerAlt} />
+                    </Col>
+                    <Col md={10}>
+                      <span className="">
+                        Naogaon,Rajshahi,Bangladesh
+                      </span>
+                    </Col>
+                  </Row>
+                </li>
+                <li>
+                  <Row>
+                    <Col md={1}>
+                      <FontAwesomeIcon icon={faEnvelope} />
+                    </Col>
+                    <Col md={10}>
+                      <span className="">coding.club.pro@gmail.com</span>
+                    </Col>
+                  </Row>
+                </li>
+                <li>
+                  <Row>
+                    <Col md={1}>
+                      <FontAwesomeIcon icon={faPhone} />
+                    </Col>
+                    <Col>
+                      <span className="">
+                        Helpline: 01763251119 (10:00AM to 10.00PM)
+                      </span>
+                    </Col>
+                  </Row>
+                </li>
+              </ul>
             </Col>
           </Row>
         </Container>
       </div>
       <hr className="m-0 p-0" />
       <p className="text-center m-0 py-3 copyright">
-        Copyright © All Reserved by Coding Club pro - programming Community in
-        2021
+        Copyright © All Reserved. 2021
       </p>
     </div>
   );

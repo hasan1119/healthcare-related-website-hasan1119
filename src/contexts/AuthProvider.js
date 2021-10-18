@@ -5,11 +5,12 @@ export const AuthContext = createContext();
 
 const AuthProvider = ({ children }) => {
   // hooks
-  const AllContexts = useFirebase();
+    const allAuthInfo = useFirebase();
+    const data = {
+      allAuthInfo,
+    };
 
-  return (
-    <AuthContext.Provider value={AllContexts}>{children}</AuthContext.Provider>
-  );
+  return <AuthContext.Provider value={data}>{children}</AuthContext.Provider>;
 };
 
 export default AuthProvider;

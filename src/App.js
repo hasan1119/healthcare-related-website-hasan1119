@@ -9,38 +9,45 @@ import Login from "./pages/Login.js";
 import AuthProvider from "./contexts/AuthProvider.js";
 import "bootstrap/dist/css/bootstrap.min.css";
 import HomeContainer from "./components/homeContainer/HomeContainer.js";
+import Reset from './pages/Reset.js'
 
 function App() {
   return (
-    <BrowserRouter>
-      <AuthProvider>
-        <Switch>
-          <Route exact path="/">
-            <HomeContainer></HomeContainer>
-          </Route>
-          <Route exact path="/home">
-            <HomeContainer></HomeContainer>
-          </Route>
+    <AuthProvider>
+      <BrowserRouter>
+        <AuthProvider>
+          <Switch>
+            <Route exact path="/">
+              <HomeContainer></HomeContainer>
+            </Route>
+            <Route exact path="/home">
+              <HomeContainer></HomeContainer>
+            </Route>
 
-          <Route path="/about">
-            <About></About>
-          </Route>
-          <Route path="/contact">
-            <Contact></Contact>
-          </Route>
-          <Route path="/signup">
-            <Signup></Signup>
-          </Route>
-          <Route path="/login">
-            <Login></Login>
-          </Route>
+            <Route path="/about">
+              <About></About>
+            </Route>
 
-          <Route path="*">
-            <PageNotFound></PageNotFound>
-          </Route>
-        </Switch>
-      </AuthProvider>
-    </BrowserRouter>
+            <Route path="/reset">
+              <Reset></Reset>
+            </Route>
+            <Route path="/contact">
+              <Contact></Contact>
+            </Route>
+            <Route path="/signup">
+              <Signup></Signup>
+            </Route>
+            <Route path="/login">
+              <Login></Login>
+            </Route>
+
+            <Route path="*">
+              <PageNotFound></PageNotFound>
+            </Route>
+          </Switch>
+        </AuthProvider>
+      </BrowserRouter>
+    </AuthProvider>
   );
 }
 

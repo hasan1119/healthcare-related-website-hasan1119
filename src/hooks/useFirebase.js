@@ -54,8 +54,7 @@ const useFirebase = () => {
     return signInWithPopup(auth, fbProvider);
   }
   // Email sign in
-  function signInWithEmail(e) {
-    e.preventDefault();
+  function signInWithEmail() {
     return signInWithEmailAndPassword(auth, email, password);
   }
   // set name and profile image url
@@ -101,30 +100,15 @@ const useFirebase = () => {
   }
 
   // reset password
-  function passwordReset(e) {
-    e.preventDefault();
-    sendPasswordResetEmail(auth, email)
-      .then(() => {
-        alert("password reset email has been sent");
-      })
-      .catch((err) => {
-        setError(err.message);
-      });
+  function passwordReset() {
+    return sendPasswordResetEmail(auth, email)
+     
   }
 
   // sign up with email password
-  function singUp(e) {
-    e.preventDefault();
-
-    createUserWithEmailAndPassword(auth, email, password)
-      .then((result) => {
-        setNameAndImage();
-        emailVerify();
-        alert("user has been created");
-      })
-      .catch((err) => {
-        setError(err.message);
-      });
+  function singUp() {
+   
+   return createUserWithEmailAndPassword(auth, email, password)
   }
   // get name
   function getName(e) {
@@ -145,6 +129,7 @@ const useFirebase = () => {
   }
 
   return {
+    email,
     signInWithEmail,
     signInWithFacebook,
     signInWithGithub,
@@ -161,6 +146,8 @@ const useFirebase = () => {
     getName,
     passwordReset,
     loading,
+    setNameAndImage,
+    emailVerify,
   };
 };
 

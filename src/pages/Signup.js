@@ -1,6 +1,6 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 import { Col, Form, FormControl, InputGroup, Row } from "react-bootstrap";
-import useAuth from "../hooks/useAuth.js";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faEnvelope,
@@ -10,108 +10,144 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { NavLink } from "react-router-dom";
 import NormalHeader from "./../components/header/NormalHeader.js";
+import useAuth from "../hooks/useAuth.js";
+import Bg from "./../assets/images/loginandsignupbg.png";
+import Footer from "../components/footer/Footer.js";
+
 const Signup = () => {
-  const { getPhoto, getName, singUp, getEmail, getPassword, error } = useAuth();
+  const history = useHistory();
+  const { allAuthInfo } = useAuth();
+  const {
+    getPhoto,
+    setNameAndImage,
+    emailVerify,
+    setError,
+    getName,
+    singUp,
+    getEmail,
+    getPassword,
+    error,
+  } = allAuthInfo;
 
   return (
-    <div className="text-center mt-5 pt-5 my-4">
+    <>
       <NormalHeader />
-      <h2>Please Sign Up</h2>
-      <p className=" mt-2">Sign Up with Email & Password</p>
-      <p className="text-danger text-center">{error}</p>
-      <div className="w-25 mx-auto">
-        <Form onSubmit={singUp}>
-          <Row>
-            <Col className="text-start">
-              <Form.Label htmlFor="name" visuallyHidden>
-                Your Name
-              </Form.Label>
-              <InputGroup className="mb-2">
-                <InputGroup.Text>
-                  <FontAwesomeIcon icon={faUser}></FontAwesomeIcon>
-                </InputGroup.Text>
-                <FormControl
-                  required
-                  onBlur={getName}
-                  type="text"
-                  autoComplete="current-name"
-                  id="name"
-                  placeholder="Enter your name"
-                />
-              </InputGroup>
-            </Col>
-          </Row>
-          <Row>
-            <Col className="text-start">
-              <Form.Label htmlFor="email" visuallyHidden>
-                Your Email Address
-              </Form.Label>
-              <InputGroup className="mb-2">
-                <InputGroup.Text>
-                  <FontAwesomeIcon icon={faEnvelope}></FontAwesomeIcon>
-                </InputGroup.Text>
-                <FormControl
-                  required
-                  onBlur={getEmail}
-                  type="email"
-                  autoComplete="current-email"
-                  id="email"
-                  placeholder="Enter your email address"
-                />
-              </InputGroup>
-            </Col>
-          </Row>
-          <Row className="mt-2">
-            <Col className="text-start">
-              <Form.Label htmlFor="password" visuallyHidden>
-                Your Password
-              </Form.Label>
-              <InputGroup className="mb-2">
-                <InputGroup.Text>
-                  <FontAwesomeIcon icon={faLock}></FontAwesomeIcon>
-                </InputGroup.Text>
-                <FormControl
-                  required
-                  onBlur={getPassword}
-                  type="password"
-                  autoComplete="current-password"
-                  id="password"
-                  placeholder="Enter your password"
-                />
-              </InputGroup>
-            </Col>
-          </Row>
-          <Row>
-            <Col className="text-start">
-              <Form.Label htmlFor="name" visuallyHidden>
-                Your Profile photo URL
-              </Form.Label>
-              <InputGroup className="mb-2">
-                <InputGroup.Text>
-                  <FontAwesomeIcon icon={faLink}></FontAwesomeIcon>
-                </InputGroup.Text>
-                <FormControl
-                  required
-                  onBlur={getPhoto}
-                  type="text"
-                  autoComplete="current-text"
-                  id="photo"
-                  placeholder="Enter valid photo url"
-                />
-              </InputGroup>
-            </Col>
-          </Row>
-          <button type="submit" className="btn btn-primary mt-2 w-100">
-            Sign up
-          </button>
-        </Form>
+      <div
+        style={{ background: `url(${Bg})` }}
+        className="text-center text-white mt-5 pt-5 my-4 mb-0"
+      >
+        <h2>Please Register</h2>
+        <p className=" mt-2">Register with Email & Password</p>
+        <p className="text-danger text-center">{error}</p>
+        <div className="form-container mx-auto">
+          <Form
+            onSubmit={(e) => {
+              e.preventDefault();
+              singUp()
+                .then((result) => {
+                  setNameAndImage();
+                  emailVerify();
+                  alert("user has been created");
+                  history.push("/login");
+                })
+                .catch((err) => {
+                  setError(err.message);
+                });
+            }}
+          >
+            <Row>
+              <Col className="text-start">
+                <Form.Label htmlFor="name" visuallyHidden>
+                  Your Name
+                </Form.Label>
+                <InputGroup className="mb-2">
+                  <InputGroup.Text>
+                    <FontAwesomeIcon icon={faUser}></FontAwesomeIcon>
+                  </InputGroup.Text>
+                  <FormControl
+                    required
+                    onBlur={getName}
+                    type="text"
+                    autoComplete="current-name"
+                    id="name"
+                    placeholder="Enter your name"
+                  />
+                </InputGroup>
+              </Col>
+            </Row>
+            <Row>
+              <Col className="text-start">
+                <Form.Label htmlFor="email" visuallyHidden>
+                  Your Email Address
+                </Form.Label>
+                <InputGroup className="mb-2">
+                  <InputGroup.Text>
+                    <FontAwesomeIcon icon={faEnvelope}></FontAwesomeIcon>
+                  </InputGroup.Text>
+                  <FormControl
+                    required
+                    onBlur={getEmail}
+                    type="email"
+                    autoComplete="current-email"
+                    id="email"
+                    placeholder="Enter your email address"
+                  />
+                </InputGroup>
+              </Col>
+            </Row>
+            <Row className="mt-2">
+              <Col className="text-start">
+                <Form.Label htmlFor="password" visuallyHidden>
+                  Your Password
+                </Form.Label>
+                <InputGroup className="mb-2">
+                  <InputGroup.Text>
+                    <FontAwesomeIcon icon={faLock}></FontAwesomeIcon>
+                  </InputGroup.Text>
+                  <FormControl
+                    required
+                    onBlur={getPassword}
+                    type="password"
+                    autoComplete="current-password"
+                    id="password"
+                    placeholder="Enter your password"
+                  />
+                </InputGroup>
+              </Col>
+            </Row>
+            <Row>
+              <Col className="text-start">
+                <Form.Label htmlFor="name" visuallyHidden>
+                  Your Profile photo URL
+                </Form.Label>
+                <InputGroup className="mb-2">
+                  <InputGroup.Text>
+                    <FontAwesomeIcon icon={faLink}></FontAwesomeIcon>
+                  </InputGroup.Text>
+                  <FormControl
+                    required
+                    onBlur={getPhoto}
+                    type="text"
+                    autoComplete="current-text"
+                    id="photo"
+                    placeholder="Enter valid photo url"
+                  />
+                </InputGroup>
+              </Col>
+            </Row>
+            <button type="submit" className="btn text-white custom-btn mt-2 w-100">
+              Sign up
+            </button>
+          </Form>
+        </div>
+        <p className="mt-2 mb-0 pb-5">
+          <NavLink className="text-decoration-none" to="/login">
+            Already have an account? Please login!
+          </NavLink>
+        </p>
       </div>
-      <p className="mt-2">
-        <NavLink className="text-decoration-none" to="/login">
-          Already have an account? Please login!
-        </NavLink>
-      </p>
-    </div>
+      <Footer></Footer>
+    </>
   );
 };
 

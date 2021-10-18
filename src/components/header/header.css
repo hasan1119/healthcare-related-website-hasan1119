@@ -21,6 +21,9 @@
   border-radius: 52px !important;
   border: 1px solid white;
 }
+.email{
+  font-size: 14px;
+}
 .navBar {
   position: fixed !important;
   top: 0 !important;

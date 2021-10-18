@@ -1,0 +1,13 @@
+.aboutSection {
+      background-size: 50% 50%;
+    background-repeat: no-repeat;
+    background-position: left top;
+}
+.about{
+    padding: 200px 0;
+}
+.about-title{
+    line-height: 1.2;
+    font-size: 44px;
+    font-weight: 700;
+}
