@@ -8,7 +8,7 @@ const Home = () => {
   return (
     <div>
       {/* Hero area */}
-      <Slide bottom>
+      <Slide left>
         <div className="vh-100 d-flex align-items-center hero-area">
           <Container>
             <Row className="">
@@ -17,12 +17,16 @@ const Home = () => {
                   <Zoom right cascade>
                     <h6 className="greeting">Welcome to HealthCare</h6>
                   </Zoom>
-                  <h1 className="title">We are here for your Care</h1>
-                  <p className="desc">
-                    Far far away, behind the word mountains, far from the
-                    countries Vokalia and Consonantia, there live the blind
-                    texts. Separated they live in Bookmarksgrove.
-                  </p>
+                  <Zoom right cascade>
+                    <h1 className="title">We are here for your Care</h1>
+                  </Zoom>
+                  <Zoom right cascade>
+                    <p className="desc">
+                      Far far away, behind the word mountains, far from the
+                      countries Vokalia and Consonantia, there live the blind
+                      texts. Separated they live in Bookmarksgrove.
+                    </p>
+                  </Zoom>
                   <Zoom>
                     <button className="btn btn-primary appointment rounded-pill">
                       Make a appointment

@@ -54,7 +54,7 @@ const Header = () => {
                   <Nav.Link
                     className="text-white register"
                     as={NavLink}
-                    to="/register"
+                    to="/signup"
                   >
                     Register
                   </Nav.Link>

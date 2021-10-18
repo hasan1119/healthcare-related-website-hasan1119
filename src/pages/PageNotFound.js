@@ -5,7 +5,7 @@ const NotFound = () => {
   return (
     <div
       style={{
-        height: "91vh",
+        height: "100vh",
         background: `url(${SectionBg})`,
         backgroundAttachment: "fixed",
       }}
