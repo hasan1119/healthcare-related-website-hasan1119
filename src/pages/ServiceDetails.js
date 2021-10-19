@@ -28,15 +28,15 @@ const ServiceDetails = () => {
           }}
         >
         <Zoom>
-          <Container className="mt-5 pt-5">
+          <Container className="mt-lg-5 pt-lg-5 pt-2">
             <Row
               style={{ background: "black" }}
               className="mt-5 border d-flex align-items-center"
             >
-              <Col className="m-0 p-0">
+              <Col lg className="m-0 p-0">
                 <img width="100%" src={img} alt="" />
               </Col>
-              <Col>
+              <Col lg>
                 <h1 className="mt-2 text-primary">{title}</h1>
                 <h3 className="text-white">{desc}</h3>
                 <p className="text-muted">{article}</p>

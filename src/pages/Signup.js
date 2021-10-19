@@ -35,12 +35,12 @@ const Signup = () => {
       <NormalHeader />
       <div
         style={{ background: `url(${Bg}) fixed` }}
-        className="text-center text-white mt-5 pt-5 my-4 mb-0"
+        className="text-center text-white mt-lg-5 pt-5 mb-0"
       >
 <Zoom>
   <div>
         <h2>Please Register</h2>
-        <p className=" mt-2">Register with Email & Password</p>
+        <p className="mt-2">Register with Email & Password</p>
         <p className="text-danger text-center">{error}</p>
         <div className="form-container mx-auto">
           <Form
@@ -146,10 +146,9 @@ const Signup = () => {
             </button>
           </Form>
         </div>
-        <p className="mt-2 mb-0 pb-5">
-          <NavLink className="text-decoration-none" to="/login">
-            Already have an account? Please login!
-          </NavLink>
+            <p className="mt-2 mb-0 pb-5">
+              Already have an account?
+          <NavLink className="text-decoration-none" to="/login"> Please login!  </NavLink>
           </p>
        </div>
         </Zoom>

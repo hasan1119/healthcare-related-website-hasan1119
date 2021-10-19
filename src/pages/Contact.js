@@ -28,7 +28,7 @@ const formStyle = { background: "transparent", color: "white" };
 
 function ContactForm() {
   return (
-    <div style={{ padding: "58px 0 40px" }}>
+    <div style={{ padding: "58px 10px 40px" }}>
       <Zoom left cascade>
         <h2 className="text-center text-white">Contact Us</h2>
       </Zoom>

@@ -15,7 +15,7 @@ import {
   faEnvelope,
   faPhone,
 } from "@fortawesome/free-solid-svg-icons";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -62,16 +62,16 @@ const Footer = () => {
               <h3>Links</h3>
               <ul className="list-unstyled footer-link">
                 <li>
-                  <NavLink to="/home">Home</NavLink>
+                  <Link to="/home">Home</Link>
                 </li>
                 <li>
-                  <NavLink to="/about">About us</NavLink>
+                  <Link to="/about">About us</Link>
                 </li>
                 <li>
-                  <NavLink to="/contact">Contact us</NavLink>
+                  <Link to="/contact">Contact us</Link>
                 </li>
                 <li>
-                  <NavLink to="/courses">Services</NavLink>
+                  <Link to="/courses">Services</Link>
                 </li>
               </ul>
               </div>
@@ -83,16 +83,16 @@ const Footer = () => {
               <h3>Departments</h3>
               <ul className="list-unstyled footer-link">
                 <li>
-                  <NavLink to="/home">Neurology</NavLink>
+                  <Link to="/">Neurology</Link>
                 </li>
                 <li>
-                  <NavLink to="/about">Opthalmology</NavLink>
+                  <Link to="/">Opthalmology</Link>
                 </li>
                 <li>
-                  <NavLink to="/contact">Nuclear Magnetic</NavLink>
+                  <Link to="/">Nuclear Magnetic</Link>
                 </li>
                 <li>
-                  <NavLink to="/courses">Surgical</NavLink>
+                  <Link to="/">Surgical</Link>
                 </li>
               </ul>
               </div>

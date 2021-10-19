@@ -14,9 +14,9 @@ const Doctors = () => {
     <>
       <NormalHeader />
 
-      <div style={{ background: `url(${Bg})` }}>
+      <div className=" pt-lg-5" style={{ background: `url(${Bg})` }}>
         <Container>
-          <div className="mt-5 pt-5 doctor">
+          <div className="mt-lg-5 pt-5 doctor">
             <Zoom left cascade>
               <h1 className="text-center text-white doctor-title">
                 Our Qualified Doctors

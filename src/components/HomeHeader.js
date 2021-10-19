@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import {  Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import useAuth from "../hooks/useAuth.js";
 import "./../assets/css/header.css";
 
 const Header = () => {
+
+  
   const [navbar, setNavbar] = useState(true);
 
   function changeBackground() {
@@ -29,27 +31,27 @@ const Header = () => {
         expand="lg"
       >
         <Container>
-          <Navbar.Brand as={NavLink} className="text-white" to="/home">
+          <Navbar.Brand as={Link} className="text-white" to="/home">
             <span className="fw-bold fs-4">HealthCare</span>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto align-items-center">
-              <Nav.Link as={NavLink} to="/home" className="text-white">
+              <Nav.Link  as={NavLink} to="/home" className="text-white">
                 Home
               </Nav.Link>
 
-              <Nav.Link as={NavLink} to="/about" className="text-white">
+              <Nav.Link  as={NavLink} to="/about" className="text-white">
                 About
               </Nav.Link>
 
-              <Nav.Link as={NavLink} to="/doctors" className="text-white">
+              <Nav.Link  as={NavLink} to="/doctors" className="text-white">
                 Doctors
               </Nav.Link>
-              <Nav.Link as={HashLink} to="/home#services" className="text-white">
+              <Nav.Link  as={HashLink} to="/home#services" className="text-white">
                 Services
               </Nav.Link>
-              <Nav.Link
+              <Nav.Link 
                 as={NavLink}
                 to="/contact"
                 className="text-white contact"
@@ -58,7 +60,7 @@ const Header = () => {
               </Nav.Link>
               {!displayName ? (
                 <>
-                  <Nav.Link
+                  <Nav.Link 
                     className="text-white mb-lg-0 mb-3 login"
                     as={NavLink}
                     to="/login"
@@ -66,7 +68,7 @@ const Header = () => {
                     Login
                   </Nav.Link>
 
-                  <Nav.Link
+                  <Nav.Link 
                     className="text-white register"
                     as={NavLink}
                     to="/signup"

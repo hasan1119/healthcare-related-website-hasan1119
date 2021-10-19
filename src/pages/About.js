@@ -19,7 +19,7 @@ const About = () => {
                   style={{
                     background: `url(${sectionBg})`,
                   }}
-                  className="aboutSection mt-5"
+                  className="aboutSection mt-lg-5"
                 ></div>
               </Fade>
             </Col>
