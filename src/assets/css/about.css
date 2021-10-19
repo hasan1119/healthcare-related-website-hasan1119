@@ -1,13 +1,39 @@
 .aboutSection {
-      background-size: 50% 50%;
-    background-repeat: no-repeat;
-    background-position: left top;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  height: 100vh !important;
 }
-.about{
-    padding: 200px 0;
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-.about-title{
-    line-height: 1.2;
-    font-size: 44px;
-    font-weight: 700;
+.about-title {
+  line-height: 1.2;
+  font-size: 44px;
+  font-weight: 700;
+}
+.about-desc {
+  font-size: 17px;
+  line-height: 1.8;
+  font-weight: 400;
+  color: #999999;
+}
+
+@media screen and (max-width: 520px) {
+  .about-title {
+    font-size: 29px !important;
+  }
+  .about-desc {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+}
+
+
+@media screen and (max-width: 389px) {
+.appointment-btn{
+    margin-bottom: 15px;
+}
 }
