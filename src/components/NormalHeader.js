@@ -2,6 +2,7 @@ import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import useAuth from "../hooks/useAuth.js";
 import "./../assets/css/NormalHeader.css";
+import { HashLink } from "react-router-hash-link";
 
 const Header = () => {
   const { allAuthInfo } = useAuth();
@@ -28,8 +29,8 @@ const Header = () => {
               <Nav.Link as={NavLink} to="/doctors" className="text-white">
                 Doctors
               </Nav.Link>
-              <Nav.Link as={NavLink} to="/blog" className="text-white">
-                Blog
+              <Nav.Link as={HashLink} to="/home#services" className="text-white">
+                Services
               </Nav.Link>
               <Nav.Link
                 as={NavLink}

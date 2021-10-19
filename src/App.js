@@ -10,6 +10,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Reset from './pages/Reset.js'
 import HomeContainer from "./components/HomeContainer.js";
 import Doctors from "./pages/Doctors.js";
+import ServiceDetails from "./pages/ServiceDetails.js";
+import PrivateRoute from "./privateRoute/PrivateRoute.js";
 
 function App() {
   return (
@@ -44,6 +46,9 @@ function App() {
             <Route path="/doctors">
               <Doctors></Doctors>
             </Route>
+            <PrivateRoute path="/service/:key">
+              <ServiceDetails></ServiceDetails>
+            </PrivateRoute>
 
             <Route path="*">
               <PageNotFound></PageNotFound>

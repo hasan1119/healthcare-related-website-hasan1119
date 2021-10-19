@@ -4,6 +4,7 @@ import "./../assets/css/home.css";
 import Zoom from "react-reveal/Zoom";
 import Slide from "react-reveal/Slide";
 import Service from "../components/Service.js";
+import BG from "./../assets/images/loginandsignupbg.png";
 
 const Home = () => {
   return (
@@ -40,14 +41,17 @@ const Home = () => {
           </Container>
         </div>
       </Slide>
-      <Container>
-        <h2 className="text-center">Our Services</h2>
-        <p className="text-center">In this section you can find all of our featured health care related services</p>
+      <div id='services' style={{ background: `url(${BG})` }}>
+        <Container style={{ padding: "80px 15px" }}>
+          <h2 className="text-center text-white">Our Services</h2>
+          <p className="text-center text-muted mb-4">
+            In this section you can find all of our featured health care related
+            services
+          </p>
 
-        
-       <Service/>
-      
-      </Container>
+          <Service />
+        </Container>
+      </div>
     </div>
   );
 };
