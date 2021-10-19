@@ -7,9 +7,11 @@ import { NavLink, useLocation, useHistory } from "react-router-dom";
 import google from "./../assets/images/google.png";
 import facebook from "./../assets/images/facebook.png";
 import github from "./../assets/images/github.png";
-import NormalHeader from "./../components/header/NormalHeader.js";
-import Footer from "../components/footer/Footer.js";
+import NormalHeader from "./../components/NormalHeader.js";
+import Footer from "../components/Footer.js";
 import Bg from "./../assets/images/loginandsignupbg.png";
+import Zoom from "react-reveal/Zoom";
+
 const Login = () => {
   const { allAuthInfo } = useAuth();
   const {
@@ -33,9 +35,11 @@ const Login = () => {
     <>
       <NormalHeader />
       <div
-        style={{ background: `url(${Bg})` }}
+        style={{ background: `url(${Bg}) fixed` }}
         className="text-center text-white mt-5 pt-5 my-4 mb-0"
       >
+        <Zoom>
+          <div>
         <h2>Please Login</h2>
         <p className=" mt-2">Login with Email & Password</p>
         <p className="text-danger text-center">{error}</p>
@@ -92,7 +96,10 @@ const Login = () => {
               </Col>
             </Row>
 
-            <button type="submit" className="btn custom-btn text-white mt-2 w-100">
+            <button
+              type="submit"
+              className="btn custom-btn text-white mt-2 w-100"
+            >
               Login
             </button>
           </Form>
@@ -155,6 +162,8 @@ const Login = () => {
             <img width="50px" src={github} alt="github-icon" />
           </button>
         </div>
+        </div>
+        </Zoom>
       </div>
       <Footer></Footer>
     </>

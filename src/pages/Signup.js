@@ -9,10 +9,11 @@ import {
   faLink,
 } from "@fortawesome/free-solid-svg-icons";
 import { NavLink } from "react-router-dom";
-import NormalHeader from "./../components/header/NormalHeader.js";
+import NormalHeader from "./../components/NormalHeader.js";
 import useAuth from "../hooks/useAuth.js";
 import Bg from "./../assets/images/loginandsignupbg.png";
-import Footer from "../components/footer/Footer.js";
+import Footer from "../components/Footer.js";
+import Zoom from "react-reveal/Zoom";
 
 const Signup = () => {
   const history = useHistory();
@@ -33,9 +34,11 @@ const Signup = () => {
     <>
       <NormalHeader />
       <div
-        style={{ background: `url(${Bg})` }}
+        style={{ background: `url(${Bg}) fixed` }}
         className="text-center text-white mt-5 pt-5 my-4 mb-0"
       >
+<Zoom>
+  <div>
         <h2>Please Register</h2>
         <p className=" mt-2">Register with Email & Password</p>
         <p className="text-danger text-center">{error}</p>
@@ -135,7 +138,10 @@ const Signup = () => {
                 </InputGroup>
               </Col>
             </Row>
-            <button type="submit" className="btn text-white custom-btn mt-2 w-100">
+            <button
+              type="submit"
+              className="btn text-white custom-btn mt-2 w-100"
+            >
               Sign up
             </button>
           </Form>
@@ -144,7 +150,9 @@ const Signup = () => {
           <NavLink className="text-decoration-none" to="/login">
             Already have an account? Please login!
           </NavLink>
-        </p>
+          </p>
+       </div>
+        </Zoom>
       </div>
       <Footer></Footer>
     </>

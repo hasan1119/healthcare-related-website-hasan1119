@@ -3,13 +3,13 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import About from "./pages/About.js";
 import Contact from "./pages/Contact.js";
 import PageNotFound from "./pages/PageNotFound.js";
-import Footer from "./components/footer/Footer.js";
 import Signup from "./pages/Signup.js";
 import Login from "./pages/Login.js";
 import AuthProvider from "./contexts/AuthProvider.js";
 import "bootstrap/dist/css/bootstrap.min.css";
-import HomeContainer from "./components/homeContainer/HomeContainer.js";
 import Reset from './pages/Reset.js'
+import HomeContainer from "./components/HomeContainer.js";
+import Doctors from "./pages/Doctors.js";
 
 function App() {
   return (
@@ -20,6 +20,7 @@ function App() {
             <Route exact path="/">
               <HomeContainer></HomeContainer>
             </Route>
+
             <Route exact path="/home">
               <HomeContainer></HomeContainer>
             </Route>
@@ -39,6 +40,9 @@ function App() {
             </Route>
             <Route path="/login">
               <Login></Login>
+            </Route>
+            <Route path="/doctors">
+              <Doctors></Doctors>
             </Route>
 
             <Route path="*">

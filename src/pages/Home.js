@@ -3,6 +3,7 @@ import { Col, Container, Row } from "react-bootstrap";
 import "./../assets/css/home.css";
 import Zoom from "react-reveal/Zoom";
 import Slide from "react-reveal/Slide";
+import Service from "../components/Service.js";
 
 const Home = () => {
   return (
@@ -39,6 +40,14 @@ const Home = () => {
           </Container>
         </div>
       </Slide>
+      <Container>
+        <h2 className="text-center">Our Services</h2>
+        <p className="text-center">In this section you can find all of our featured health care related services</p>
+
+        
+       <Service/>
+      
+      </Container>
     </div>
   );
 };

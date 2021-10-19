@@ -1,15 +1,32 @@
 import React, { useState } from "react";
-import { Col, Container, Nav, Navbar, NavDropdown, Row } from "react-bootstrap";
-import logo from "./../../assets/images/logo.png";
+import {  Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
-import useAuth from "../../hooks/useAuth.js";
-import "./NormalHeader.css";
+import useAuth from "../hooks/useAuth.js";
+import "./../assets/css/header.css";
 
 const Header = () => {
-  const { logOut, displayName, photoURL, email } = useAuth();
+  const [navbar, setNavbar] = useState(true);
+
+  function changeBackground() {
+    if (window.scrollY >= 100) {
+      setNavbar(false);
+    } else {
+      setNavbar(true);
+    }
+  }
+  window.addEventListener("scroll", changeBackground);
+
+  const { allAuthInfo } = useAuth();
+  const { logOut, user } = allAuthInfo;
+  const { displayName, photoURL, email } = user;
+  console.log(allAuthInfo.user.photoURL);
   return (
     <div>
-      <Navbar variant="dark" className="navBar" expand="lg">
+      <Navbar
+        variant="dark"
+        className={navbar ? "navBar activeNav small-device" : "navBar"}
+        expand="lg"
+      >
         <Container>
           <Navbar.Brand as={NavLink} className="text-white" to="/home">
             <span className="fw-bold fs-4">HealthCare</span>
@@ -25,9 +42,6 @@ const Header = () => {
                 About
               </Nav.Link>
 
-              <Nav.Link as={NavLink} to="/department" className="text-white">
-                Department
-              </Nav.Link>
               <Nav.Link as={NavLink} to="/doctors" className="text-white">
                 Doctors
               </Nav.Link>
@@ -73,8 +87,9 @@ const Header = () => {
                   }
                 >
                   <div className="text-center">
-                    <h6>{displayName}</h6>
-                    <p className="m-0 mb-2">{email}</p>
+                    <img width="100px" src={photoURL} alt="" />
+                    <h6 className="mt-3">{displayName}</h6>
+                    <p className="m-0 email mb-2">{email}</p>
                     <button onClick={logOut} className="btn btn-primary">
                       Sign Out
                     </button>

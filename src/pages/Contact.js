@@ -1,21 +1,26 @@
 import React from "react";
 import { Form, Button, Row, Col, Container } from "react-bootstrap";
-import SectionBg from "./../assets/images/sectionBg.png";
-import Bounce from "react-reveal/Bounce";
+import SectionBg from "./../assets/images/loginandsignupbg.png";
+import Zoom from "react-reveal/Zoom";
 import Slide from "react-reveal/Slide";
-import NormalHeader from "./../components/header/NormalHeader.js";
+import Footer from "../components/Footer.js";
+import NormalHeader from "../components/NormalHeader.js";
+
 const Contact = () => {
   return (
     <>
-     <NormalHeader></NormalHeader>
-    <div
-      className="mt-lg-5"
-      style={{ background: `url(${SectionBg})`, backgroundAttachment: "fixed" }}
-    >
-     
-      <ContactForm />
+      <NormalHeader></NormalHeader>
+      <div
+        className="mt-lg-5"
+        style={{
+          background: `url(${SectionBg})`,
+          backgroundAttachment: "fixed",
+        }}
+      >
+        <ContactForm />
       </div>
-      </>
+      <Footer />
+    </>
   );
 };
 
@@ -24,18 +29,22 @@ const formStyle = { background: "transparent", color: "white" };
 function ContactForm() {
   return (
     <div style={{ padding: "58px 0 40px" }}>
-      <Bounce right>
+      <Zoom left cascade>
         <h2 className="text-center text-white">Contact Us</h2>
-      </Bounce>
+      </Zoom>
 
-      <Bounce left>
-        <p className="text-center text-muted mb-4">
-          You can easily reach us through filling up the form
+      <Zoom right cascade>
+        <p
+          style={{ maxWidth: "630px" }}
+          className="text-center mx-auto text-muted mb-4"
+        >
+          Far far away, behind the word mountains, far from the countries
+          Vokalia and Consonantia
         </p>
-      </Bounce>
+      </Zoom>
       <div>
         <Container>
-          <Slide bottom>
+          <Zoom>
             <Form>
               <Row>
                 <Col sm>
@@ -45,6 +54,7 @@ function ContactForm() {
                   >
                     <Form.Label>Your Name </Form.Label>
                     <Form.Control
+                      className="bg-white"
                       style={formStyle}
                       type="text"
                       placeholder="Enter Your Name"
@@ -58,6 +68,7 @@ function ContactForm() {
                   >
                     <Form.Label>Your Email </Form.Label>
                     <Form.Control
+                      className="bg-white"
                       style={formStyle}
                       type="email"
                       placeholder="Enter Your Email"
@@ -66,8 +77,8 @@ function ContactForm() {
                 </Col>
               </Row>
               <Form.Control
+                className="bg-white my-3"
                 style={formStyle}
-                className="my-3"
                 type="text"
                 placeholder="Write Your Subject..."
               />
@@ -77,6 +88,7 @@ function ContactForm() {
               >
                 <Form.Label>Your Messages</Form.Label>
                 <Form.Control
+                  className="bg-white"
                   style={formStyle}
                   placeholder="Write you message..."
                   as="textarea"
@@ -87,7 +99,7 @@ function ContactForm() {
                 Submit
               </Button>
             </Form>
-          </Slide>
+          </Zoom>
         </Container>
       </div>
     </div>

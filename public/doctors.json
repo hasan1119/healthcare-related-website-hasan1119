@@ -1,0 +1,34 @@
+[
+    {
+        "key":1,
+        "img":"https://preview.colorlib.com/theme/mediplus/images/xdoc-1.jpg.pagespeed.ic.myvVwp80RP.webp",
+        "name": "Dr. Lloyd Wilson",
+        "profession":"NEUROLOGIST",
+        "about":"I am an ambitious workaholic, but apart from that, pretty simple person."
+
+    },
+    {
+        "key":2,
+        "img":"https://preview.colorlib.com/theme/mediplus/images/xdoc-2.jpg.pagespeed.ic.2QUsxWkZeQ.webp",
+        "name": "Dr. Rachel Parker",
+        "profession":"OPHTHALMOLOGIST",
+        "about":"I am an ambitious workaholic, but apart from that, pretty simple person."
+
+    },
+    {
+        "key":3,
+        "img":"https://preview.colorlib.com/theme/mediplus/images/xdoc-3.jpg.pagespeed.ic.ssPmw2cMao.webp",
+        "name": "Dr. Alicia Hender",
+        "profession":"NEUROLOGIST",
+        "about":"I am an ambitious workaholic, but apart from that, pretty simple person."
+
+    },
+    {
+        "key":4,
+        "img":"https://preview.colorlib.com/theme/mediplus/images/xdoc-4.jpg.pagespeed.ic.7oxaXGL52E.webp",
+        "name": "Dr. Suvosree Smith",
+        "profession":"DENTIST",
+        "about":"I am an ambitious workaholic, but apart from that, pretty simple person."
+
+    }
+]

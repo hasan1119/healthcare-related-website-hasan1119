@@ -1,7 +1,9 @@
 import React from "react";
-import "./footer.css";
+import "./../assets/css/footer.css";
 import { Col, Container, Row } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Zoom from "react-reveal/Zoom";
+
 import {
   faTwitter,
   faFacebookF,
@@ -18,38 +20,45 @@ import { NavLink } from "react-router-dom";
 const Footer = () => {
   return (
     <div className="text-white">
-      <div className="py-4 gradient">
+      <div className="py-4 pt-5 gradient">
         <Container>
           <Row>
             <Col lg md={6} className="mb-sm-3">
-              <h3>HealthCare</h3>
-              <p className="h-desc">
-                Far far away, behind the word mountains, far from the countries.
-              </p>
-              <ul className="list-unstyled social-icons d-flex">
-                <li>
-                  <a href="/">
-                    <FontAwesomeIcon icon={faTwitter} />
-                  </a>
-                </li>
-                <li>
-                  <a href="/">
-                    <FontAwesomeIcon icon={faFacebookF} />
-                  </a>
-                </li>
-                <li>
-                  <a href="/">
-                    <FontAwesomeIcon icon={faInstagram} />
-                  </a>
-                </li>
-                <li>
-                  <a href="/">
-                    <FontAwesomeIcon icon={faYoutube} />
-                  </a>
-                </li>
-              </ul>
+              <Zoom>
+                <div>
+                <h3>HealthCare</h3>
+                <p className="h-desc">
+                  Far far away, behind the word mountains, far from the
+                  countries.
+                </p>
+                <ul className="list-unstyled social-icons d-flex">
+                  <li>
+                    <a href="/">
+                      <FontAwesomeIcon icon={faTwitter} />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/">
+                      <FontAwesomeIcon icon={faFacebookF} />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/">
+                      <FontAwesomeIcon icon={faInstagram} />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/">
+                      <FontAwesomeIcon icon={faYoutube} />
+                    </a>
+                  </li>
+                </ul>
+                </div>
+              </Zoom>
             </Col>
             <Col lg md={6} className="mb-sm-3">
+              <Zoom>
+                <div>
               <h3>Links</h3>
               <ul className="list-unstyled footer-link">
                 <li>
@@ -65,8 +74,12 @@ const Footer = () => {
                   <NavLink to="/courses">Services</NavLink>
                 </li>
               </ul>
+              </div>
+              </Zoom>
             </Col>
             <Col lg md={6} className="mb-sm-3">
+              <Zoom>
+                <div>
               <h3>Departments</h3>
               <ul className="list-unstyled footer-link">
                 <li>
@@ -82,8 +95,12 @@ const Footer = () => {
                   <NavLink to="/courses">Surgical</NavLink>
                 </li>
               </ul>
+              </div>
+              </Zoom>
             </Col>
             <Col lg md={6}>
+              <Zoom>
+              <div>
               <h3>Reach Out Us?</h3>
 
               <ul className="list-unstyled contact-info">
@@ -93,9 +110,7 @@ const Footer = () => {
                       <FontAwesomeIcon icon={faMapMarkerAlt} />
                     </Col>
                     <Col md={10}>
-                      <span className="">
-                        Naogaon,Rajshahi,Bangladesh
-                      </span>
+                      <span className="">Naogaon,Rajshahi,Bangladesh</span>
                     </Col>
                   </Row>
                 </li>
@@ -121,8 +136,11 @@ const Footer = () => {
                     </Col>
                   </Row>
                 </li>
-              </ul>
+              </ul>   
+             </div>
+            </Zoom>
             </Col>
+        
           </Row>
         </Container>
       </div>
