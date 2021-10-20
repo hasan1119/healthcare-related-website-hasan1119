@@ -61,3 +61,14 @@
     padding: 0.7rem 1rem;
   }
 }
+
+.priority {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(#00000049, #00000049), url("https://preview.colorlib.com/theme/mediplus/images/xbg_2.jpg.pagespeed.ic.pQrXJywxF9.webp");
+  height: 400px;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}

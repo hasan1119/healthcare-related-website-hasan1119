@@ -34,18 +34,20 @@ function App() {
             <Route path="/reset">
               <Reset></Reset>
             </Route>
-            <Route path="/contact">
+            <PrivateRoute path="/contact">
               <Contact></Contact>
-            </Route>
+            </PrivateRoute>
             <Route path="/signup">
               <Signup></Signup>
             </Route>
             <Route path="/login">
               <Login></Login>
             </Route>
-            <Route path="/doctors">
+            
+            <PrivateRoute path="/doctors">
               <Doctors></Doctors>
-            </Route>
+            </PrivateRoute>
+
             <PrivateRoute path="/service/:key">
               <ServiceDetails></ServiceDetails>
             </PrivateRoute>

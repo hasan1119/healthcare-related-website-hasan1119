@@ -71,7 +71,7 @@ const useFirebase = () => {
 
   function emailVerify() {
     sendEmailVerification(auth.currentUser).then(() => {
-      alert(`An Verification mail has been set to ${email}`);
+      alert(`A Verification mail has been set to ${email}`);
     });
   }
 
@@ -121,7 +121,12 @@ const useFirebase = () => {
   }
   // Get password
   function getPassword(e) {
-    setPassword(e?.target?.value);
+    const myPass = e?.target?.value;
+    if (myPass > 6) {
+      setPassword(e?.target?.value);
+    }else{
+      setError('Password should be at lest 6 Characters!')
+    }
   }
   // Get photoUrl
   function getPhoto(e) {

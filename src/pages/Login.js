@@ -121,8 +121,8 @@ const Login = () => {
               </p>
             </p>
             <p className="mt-2 mt-lg-3">Or</p>
-            <p> Login with</p>
-            <div className="pb-3 pt-lg-4">
+            <p className='mb-0'> Login with</p>
+            <div className="pb-3  pt-lg-4">
               <button
                 onClick={() => {
                   signInWithGoogle()

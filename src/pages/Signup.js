@@ -25,6 +25,7 @@ const Signup = () => {
     setError,
     getName,
     singUp,
+    logOut,
     getEmail,
     getPassword,
     error,
@@ -50,7 +51,8 @@ const Signup = () => {
                 .then((result) => {
                   setNameAndImage();
                   emailVerify();
-                  alert("user has been created");
+                  alert("Registration has been successful! Please Login");
+                  logOut()
                   history.push("/login");
                 })
                 .catch((err) => {

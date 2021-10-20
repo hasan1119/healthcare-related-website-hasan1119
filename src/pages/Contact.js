@@ -2,7 +2,6 @@ import React from "react";
 import { Form, Button, Row, Col, Container } from "react-bootstrap";
 import SectionBg from "./../assets/images/loginandsignupbg.png";
 import Zoom from "react-reveal/Zoom";
-import Slide from "react-reveal/Slide";
 import Footer from "../components/Footer.js";
 import NormalHeader from "../components/NormalHeader.js";
 

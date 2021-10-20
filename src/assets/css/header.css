@@ -17,6 +17,7 @@
   color: #fff !important;
   border-radius: 52px !important;
 }
+
 .login {
   display: inline-block !important;
   background: transparent !important;
@@ -41,9 +42,9 @@
 a.text-white.nav-link {
   margin: 0 5px;
   font-weight: bold;
-  transition: color .5s;
+  transition: color 0.5s;
 }
-a.text-white.nav-link:hover{
+a.text-white.nav-link:hover {
   color: #ff136f !important;
 }
 @media screen and (max-width: 991px) {
@@ -64,3 +65,7 @@ a.text-white.nav-link:hover{
     margin-bottom: 10px;
   }
 }
+.ms-auto.align-items-center.navbar-nav .register:hover {
+  color: Black !important;
+}
+

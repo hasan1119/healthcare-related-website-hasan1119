@@ -1,0 +1,38 @@
+[
+  {
+    "key": 1,
+    "img": "https://preview.colorlib.com/theme/mediplus/images/image_1.jpg.webp",
+    "title": "The Art of Healthy Living",
+    "article": "The Art of Healthy Living offers fitness articles related to subjects such as exercise supplements and high-intensity interval training."
+  },
+  {
+    "key": 2,
+    "img": "https://preview.colorlib.com/theme/mediplus/images/image_2.jpg.webp",
+    "title": "Nerd Fitness",
+    "article": "This blog serves up health and fitness advice from a self-described “full-time team of 25 supportive nerds and a massive worldwide community."
+  },
+  {
+    "key": 3,
+    "img": "https://preview.colorlib.com/theme/mediplus/images/image_3.jpg.webp",
+    "title": "Care of your health",
+    "article": "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts."
+  },
+  {
+    "key": 4,
+    "img": "https://preview.colorlib.com/theme/mediplus/images/image_5.jpg.webp",
+    "title": "MyFitnessPal Blog",
+    "article": "This is the blog of nutrition tracking app MyFitnessPal. Get healthy recipes, nutrition advice, weight loss tips, fitness inspiration"
+  },
+  {
+    "key": 5,
+    "img": "https://preview.colorlib.com/theme/mediplus/images/image_4.jpg.webp",
+    "title": "Bites of Wellness",
+    "article": "Bites of Wellness founder Samantha Rowland is a personal trainer, nutrition coach, and fitness chef. Her site contains recipes for those with various diets, including gluten free, low carb, and dairy free."
+  },
+  {
+    "key": 6,
+    "img": "https://preview.colorlib.com/theme/mediplus/images/image_6.jpg.webp",
+    "title": "Get Enough Sleep",
+    "article": "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts."
+  }
+]

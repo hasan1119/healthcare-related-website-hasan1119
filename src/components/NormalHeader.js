@@ -1,5 +1,5 @@
 import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
-import { NavLink } from "react-router-dom";
+import { NavLink,Link } from "react-router-dom";
 import useAuth from "../hooks/useAuth.js";
 import "./../assets/css/NormalHeader.css";
 import { HashLink } from "react-router-hash-link";
@@ -43,7 +43,7 @@ const Header = () => {
                 <>
                   <Nav.Link
                     className="text-white mb-lg-0 mb-3 login"
-                    as={NavLink}
+                    as={Link}
                     to="/login"
                   >
                     Login
@@ -51,7 +51,7 @@ const Header = () => {
 
                   <Nav.Link
                     className="text-white register"
-                    as={NavLink}
+                    as={Link}
                     to="/signup"
                   >
                     Register

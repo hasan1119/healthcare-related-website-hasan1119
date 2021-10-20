@@ -25,7 +25,8 @@ const ServiceDetails = () => {
             minHeight: "80vh",
             background: `url(${BG})`,
             backgroundAttachment: "fixed",
-          }}
+        }}
+        className='pb-5'
         >
         <Zoom>
           <Container className="mt-lg-5 pt-lg-5 pt-2">
