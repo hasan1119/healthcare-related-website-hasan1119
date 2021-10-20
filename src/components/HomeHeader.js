@@ -22,7 +22,6 @@ const Header = () => {
   const { allAuthInfo } = useAuth();
   const { logOut, user } = allAuthInfo;
   const { displayName, photoURL, email } = user;
-  console.log(allAuthInfo.user.photoURL);
   return (
     <div>
       <Navbar

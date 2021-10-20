@@ -14,7 +14,6 @@ const ServiceDetails = () => {
   const selectedService = services.find(
     (service) => service.key === Number(key)
   );
-  console.log(selectedService);
   const { img, title, desc, article } = selectedService;
   return (
     <>
