@@ -4,7 +4,7 @@ Description: Far far away, behind the word mountains, far from the countries Vok
 
 #
 
-Live Site Link: https://health-care-projects.firebaseapp.com/
+Live Site Link: https://tourism-or-delivery-website.web.app/
 
 Technology we use to build this project:
 - JSX
